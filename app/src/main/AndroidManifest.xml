@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permiso para acceder a Internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Momento2Final"
+        tools:targetApi="31">
+
+        <!-- Actividad para gestión de productos -->
+        <activity
+            android:name=".ProductActivity"
+            android:exported="false" />
+
+        <!-- Actividad de inicio de sesión -->
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
+        <!-- Actividad principal (punto de entrada) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Otras actividades que quieras agregar en el futuro -->
+        <!-- <activity android:name=".CreateUserActivity" android:exported="false" /> -->
+        <!-- <activity android:name=".ListUserActivity" android:exported="false" /> -->
+        <!-- <activity android:name=".CreateProductActivity" android:exported="false" /> -->
+        <!-- <activity android:name=".ListProductActivity" android:exported="false" /> -->
+
+    </application>
+
+</manifest>
